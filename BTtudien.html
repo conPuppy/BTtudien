@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Từ Điển</h1>
+Nhập từ cần tìm kiếm <input type="text" id="word">
+<button onclick="search()">Search</button>
+<br>
+<div id="show"></div>
+<script>
+    let tienganh = ["cat", "dog", "dragon", "ball", "pink", "banana"];
+    let tiengviet = ["mèo", "chó", "rồng", "bóng", "hồng", "chuối"];
+
+
+    function search() {
+        let ketqua;
+        let x = document.getElementById("word").value;
+        for (let i = 0; i < tienganh.length; i++) {
+            if (x == tienganh[i]) {
+                ketqua = tiengviet[i];
+            }
+        }
+        document.getElementById("show").innerHTML = ketqua;
+    }
+
+</script>
+</body>
+</html>
